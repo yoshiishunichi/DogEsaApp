@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dF2-xW-6Vg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Zru-VY-Bf1">
+            <objects>
+                <viewController id="dF2-xW-6Vg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4x-QM-ahS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_ground" translatesAutoresizingMaskIntoConstraints="NO" id="DUU-Jk-E5b">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvb-SJ-oQQ" userLabel="セリフview">
+                                <rect key="frame" x="0.0" y="788" width="414" height="74"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7r5-zu-ild">
+                                        <rect key="frame" x="4" y="2" width="406" height="70"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsj-da-S5d">
+                                                <rect key="frame" x="10" y="2" width="386" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPT-fg-z9u">
+                                                        <rect key="frame" x="8" y="8" width="122" height="21"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="dPT-fg-z9u" firstAttribute="leading" secondItem="gsj-da-S5d" secondAttribute="leading" constant="8" id="McJ-EU-IRE"/>
+                                                    <constraint firstItem="dPT-fg-z9u" firstAttribute="bottom" secondItem="gsj-da-S5d" secondAttribute="centerY" constant="-4" id="acH-cN-tlq"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gsj-da-S5d" secondAttribute="trailing" constant="10" id="BdC-0d-Wec"/>
+                                            <constraint firstItem="gsj-da-S5d" firstAttribute="top" secondItem="7r5-zu-ild" secondAttribute="top" constant="2" id="I2p-w4-xce"/>
+                                            <constraint firstAttribute="bottom" secondItem="gsj-da-S5d" secondAttribute="bottom" constant="2" id="JEo-xy-KYR"/>
+                                            <constraint firstItem="gsj-da-S5d" firstAttribute="leading" secondItem="7r5-zu-ild" secondAttribute="leading" constant="10" id="Vn4-o4-QjP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="Bp9-tO-hMS"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="Hfn-xq-52M"/>
+                                    <constraint firstAttribute="trailing" secondItem="7r5-zu-ild" secondAttribute="trailing" constant="4" id="Mrk-wL-YMW"/>
+                                    <constraint firstAttribute="bottom" secondItem="7r5-zu-ild" secondAttribute="bottom" constant="2" id="SB3-Dy-fjE"/>
+                                    <constraint firstItem="7r5-zu-ild" firstAttribute="leading" secondItem="Nvb-SJ-oQQ" secondAttribute="leading" constant="4" id="gOO-M5-EkE"/>
+                                    <constraint firstItem="7r5-zu-ild" firstAttribute="top" secondItem="Nvb-SJ-oQQ" secondAttribute="top" constant="2" id="ykM-Jd-HBO"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKt-wE-Hb5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Now Loading..." id="vxD-Z9-xon"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BpE-K7-Uaj"/>
+                        <color key="backgroundColor" red="0.2470588235" green="0.29803921570000003" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eKt-wE-Hb5" firstAttribute="trailing" secondItem="BpE-K7-Uaj" secondAttribute="trailing" id="4bw-u2-BTL"/>
+                            <constraint firstItem="DUU-Jk-E5b" firstAttribute="top" secondItem="BpE-K7-Uaj" secondAttribute="top" id="7nL-ep-B8Q"/>
+                            <constraint firstItem="BpE-K7-Uaj" firstAttribute="bottom" secondItem="Nvb-SJ-oQQ" secondAttribute="bottom" id="9kC-LE-LJf"/>
+                            <constraint firstItem="eKt-wE-Hb5" firstAttribute="top" secondItem="BpE-K7-Uaj" secondAttribute="top" id="DhN-Q6-n8l"/>
+                            <constraint firstItem="Nvb-SJ-oQQ" firstAttribute="leading" secondItem="BpE-K7-Uaj" secondAttribute="leading" id="FPQ-Ft-0xN"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvb-SJ-oQQ" secondAttribute="trailing" id="bja-QI-rFc"/>
+                            <constraint firstItem="eKt-wE-Hb5" firstAttribute="leading" secondItem="BpE-K7-Uaj" secondAttribute="leading" id="dlh-Ba-D3Q"/>
+                            <constraint firstItem="DUU-Jk-E5b" firstAttribute="leading" secondItem="BpE-K7-Uaj" secondAttribute="leading" id="fbi-Pu-P6t"/>
+                            <constraint firstItem="BpE-K7-Uaj" firstAttribute="trailing" secondItem="DUU-Jk-E5b" secondAttribute="trailing" id="mVe-sF-FE1"/>
+                            <constraint firstItem="BpE-K7-Uaj" firstAttribute="bottom" secondItem="DUU-Jk-E5b" secondAttribute="bottom" id="mtF-Ra-k1B"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="76s-Wa-yHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742.02898550724649" y="-197.54464285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_ground" width="139.5" height="276"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

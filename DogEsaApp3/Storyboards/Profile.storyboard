@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="ui6-r6-QUN">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="whj-Tu-XR7" customClass="ProfileViewController" customModule="DogEsaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vwU-b9-mn8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmS-Da-aLy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="プロフィール" id="9ea-o8-hR2"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-xg-cVu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="cellId" rowHeight="128" id="wYS-KO-WkY" customClass="ProfileTableViewCell" customModule="DogEsaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wYS-KO-WkY" id="1fU-Ej-GZK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pv9-Lh-ClF">
+                                                    <rect key="frame" x="10" y="3" width="31" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ポチ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKl-Vn-zDk">
+                                                    <rect key="frame" x="10" y="62" width="35" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xKl-Vn-zDk" firstAttribute="centerY" secondItem="1fU-Ej-GZK" secondAttribute="centerY" constant="8" id="2T7-8E-388"/>
+                                                <constraint firstItem="pv9-Lh-ClF" firstAttribute="top" secondItem="1fU-Ej-GZK" secondAttribute="top" constant="3" id="RDa-bz-KsC"/>
+                                                <constraint firstItem="pv9-Lh-ClF" firstAttribute="leading" secondItem="1fU-Ej-GZK" secondAttribute="leading" constant="10" id="YaB-UU-zVR"/>
+                                                <constraint firstItem="xKl-Vn-zDk" firstAttribute="leading" secondItem="1fU-Ej-GZK" secondAttribute="leading" constant="10" id="vhx-a6-fI6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="xKl-Vn-zDk" id="yUO-xY-2WX"/>
+                                            <outlet property="label" destination="pv9-Lh-ClF" id="o10-ze-uYB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="khh-8M-mfM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YmS-Da-aLy" firstAttribute="leading" secondItem="EeB-xg-cVu" secondAttribute="leading" id="NMS-OA-fgz"/>
+                            <constraint firstItem="khh-8M-mfM" firstAttribute="trailing" secondItem="EeB-xg-cVu" secondAttribute="trailing" id="YOu-0b-w7J"/>
+                            <constraint firstItem="khh-8M-mfM" firstAttribute="bottom" secondItem="EeB-xg-cVu" secondAttribute="bottom" id="YWW-ly-hyq"/>
+                            <constraint firstItem="EeB-xg-cVu" firstAttribute="leading" secondItem="khh-8M-mfM" secondAttribute="leading" id="ae9-Yu-kol"/>
+                            <constraint firstItem="YmS-Da-aLy" firstAttribute="top" secondItem="vwU-b9-mn8" secondAttribute="topMargin" id="nEh-6B-0WS"/>
+                            <constraint firstItem="YmS-Da-aLy" firstAttribute="trailing" secondItem="EeB-xg-cVu" secondAttribute="trailing" id="o8h-ON-4sh"/>
+                            <constraint firstItem="EeB-xg-cVu" firstAttribute="top" secondItem="YmS-Da-aLy" secondAttribute="bottom" id="pa9-0L-0Rc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileTableView" destination="EeB-xg-cVu" id="5Ot-8E-NaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0O-z9-TBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1981" y="-703"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

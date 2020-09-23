@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ranking View Controller-->
+        <scene sceneID="LMA-Py-glS">
+            <objects>
+                <viewController storyboardIdentifier="RankingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YNF-pU-aVw" customClass="RankingViewController" customModule="DogEsaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="092-V7-Rfc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HVa-Ln-d5I">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="ランキング" id="G1e-mZ-BDp"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dOW-5o-bYG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="cellId" rowHeight="118" id="zN6-eG-thO" customClass="RankingCell" customModule="DogEsaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zN6-eG-thO" id="Muy-o1-dxF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVb-Zn-27f">
+                                                    <rect key="frame" x="8" y="47" width="30.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="太郎さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roi-uO-Fme">
+                                                    <rect key="frame" x="48.5" y="49" width="69.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10回" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfU-P1-wcq">
+                                                    <rect key="frame" x="355" y="47" width="44" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="roi-uO-Fme" firstAttribute="leading" secondItem="lVb-Zn-27f" secondAttribute="trailing" constant="10" id="0IC-3U-sbM"/>
+                                                <constraint firstItem="roi-uO-Fme" firstAttribute="centerY" secondItem="Muy-o1-dxF" secondAttribute="centerY" id="TFD-AN-L2X"/>
+                                                <constraint firstItem="lVb-Zn-27f" firstAttribute="centerY" secondItem="Muy-o1-dxF" secondAttribute="centerY" id="W6Z-MA-yYe"/>
+                                                <constraint firstItem="gfU-P1-wcq" firstAttribute="centerY" secondItem="Muy-o1-dxF" secondAttribute="centerY" id="gZg-lh-KJW"/>
+                                                <constraint firstItem="lVb-Zn-27f" firstAttribute="leading" secondItem="Muy-o1-dxF" secondAttribute="leading" constant="8" id="lMr-he-spJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="gfU-P1-wcq" secondAttribute="trailing" constant="15" id="pce-bX-7j4"/>
+                                                <constraint firstItem="gfU-P1-wcq" firstAttribute="centerY" secondItem="Muy-o1-dxF" secondAttribute="centerY" id="zAO-vS-a26"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="kaisuuLabel" destination="gfU-P1-wcq" id="IqX-ws-XHm"/>
+                                            <outlet property="nameLabel" destination="roi-uO-Fme" id="252-m4-wDP"/>
+                                            <outlet property="rankLabel" destination="lVb-Zn-27f" id="IjM-9U-QtH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P1R-ZM-hb4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P1R-ZM-hb4" firstAttribute="bottom" secondItem="dOW-5o-bYG" secondAttribute="bottom" id="5S1-fe-TFt"/>
+                            <constraint firstItem="dOW-5o-bYG" firstAttribute="leading" secondItem="P1R-ZM-hb4" secondAttribute="leading" id="HwY-gm-eKg"/>
+                            <constraint firstItem="P1R-ZM-hb4" firstAttribute="trailing" secondItem="dOW-5o-bYG" secondAttribute="trailing" id="IAB-Aw-NBN"/>
+                            <constraint firstItem="HVa-Ln-d5I" firstAttribute="trailing" secondItem="P1R-ZM-hb4" secondAttribute="trailing" id="RMY-KR-CR8"/>
+                            <constraint firstItem="HVa-Ln-d5I" firstAttribute="top" secondItem="092-V7-Rfc" secondAttribute="topMargin" id="YXV-c4-b8s"/>
+                            <constraint firstItem="HVa-Ln-d5I" firstAttribute="leading" secondItem="P1R-ZM-hb4" secondAttribute="leading" id="alf-Ak-xbn"/>
+                            <constraint firstItem="dOW-5o-bYG" firstAttribute="top" secondItem="HVa-Ln-d5I" secondAttribute="bottom" id="wg6-6N-e8h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rankingTableView" destination="dOW-5o-bYG" id="Srm-Y5-OFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36l-vP-QWR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195.6521739130435" y="-46.205357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
