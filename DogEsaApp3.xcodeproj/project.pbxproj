@@ -14,7 +14,6 @@
 		CAA07FB12519044800976A80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA07FAF2519044800976A80 /* Main.storyboard */; };
 		CAA07FB32519044B00976A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAA07FB22519044B00976A80 /* Assets.xcassets */; };
 		CAA07FB62519044B00976A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA07FB42519044B00976A80 /* LaunchScreen.storyboard */; };
-		CAB987242519186A00B43162 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB987232519186A00B43162 /* User.swift */; };
 		CAB98729251918A700B43162 /* Field.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB98728251918A700B43162 /* Field.storyboard */; };
 		CAB9872D25191B6E00B43162 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB9872C25191B6E00B43162 /* FieldViewController.swift */; };
 		CAB9873125191BDA00B43162 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB9873025191BDA00B43162 /* SignUp.storyboard */; };
@@ -28,6 +27,7 @@
 		CAB9874825191D4400B43162 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB9874725191D4400B43162 /* RankingViewController.swift */; };
 		CAB9874B2519216F00B43162 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB9874A2519216F00B43162 /* GoogleService-Info.plist */; };
 		CAB987502519294200B43162 /* レトロジャンプ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CAB9874F2519294200B43162 /* レトロジャンプ.mp3 */; };
+		CAF65627251EC0F0009B1A8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF65626251EC0F0009B1A8A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,6 @@
 		CAA07FB22519044B00976A80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAA07FB52519044B00976A80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAA07FB72519044B00976A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAB987232519186A00B43162 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../User.swift; sourceTree = "<group>"; };
 		CAB98728251918A700B43162 /* Field.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Field.storyboard; sourceTree = "<group>"; };
 		CAB9872C25191B6E00B43162 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		CAB9873025191BDA00B43162 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		CAB9874725191D4400B43162 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		CAB9874A2519216F00B43162 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../DogEsaApp/DogEsaApp/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAB9874F2519294200B43162 /* レトロジャンプ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "レトロジャンプ.mp3"; path = "../../../DogEsaApp/DogEsaApp/Sounds/レトロジャンプ.mp3"; sourceTree = "<group>"; };
+		CAF65626251EC0F0009B1A8A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D2B543B927D20EDF7899725F /* Pods-DogEsaApp3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogEsaApp3.release.xcconfig"; path = "Target Support Files/Pods-DogEsaApp3/Pods-DogEsaApp3.release.xcconfig"; sourceTree = "<group>"; };
 		F3D19A18D8CE3414E974EED8 /* Pods-DogEsaApp3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogEsaApp3.debug.xcconfig"; path = "Target Support Files/Pods-DogEsaApp3/Pods-DogEsaApp3.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +119,7 @@
 		CAB987222519185B00B43162 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CAB987232519186A00B43162 /* User.swift */,
+				CAF65626251EC0F0009B1A8A /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,7 +287,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB9873325191BF800B43162 /* SignUpViewController.swift in Sources */,
-				CAB987242519186A00B43162 /* User.swift in Sources */,
 				CAA07FAE2519044800976A80 /* ViewController.swift in Sources */,
 				CAB9873725191C5000B43162 /* MenuViewController.swift in Sources */,
 				CAB9872D25191B6E00B43162 /* FieldViewController.swift in Sources */,
@@ -296,6 +295,7 @@
 				CAB9873D25191CA100B43162 /* ProfileViewController.swift in Sources */,
 				CAA07FAC2519044800976A80 /* SceneDelegate.swift in Sources */,
 				CAB9874325191CF100B43162 /* EnterViewController.swift in Sources */,
+				CAF65627251EC0F0009B1A8A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
