@@ -12,6 +12,8 @@ import AVFoundation
 import Firebase
 import FirebaseFirestore
 import FirebaseDatabase
+import FirebaseAuth
+import os
 
 class FieldViewController: UIViewController{
     
@@ -56,7 +58,11 @@ class FieldViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("あああああああああああああああああ")
+        let center = UNUserNotificationCenter.current()
+        // 通知の使用許可をリクエスト
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        }
+        
         self.bgImageView.addSubview(serihuView)
         self.view.bringSubviewToFront(serihuView)
         

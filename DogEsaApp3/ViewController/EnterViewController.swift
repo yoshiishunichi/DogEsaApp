@@ -45,12 +45,65 @@ class EnterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         let field = fieldNav.viewControllers[0] as! FieldViewController
         
         if first{
+            let storyboard = UIStoryboard(name: "Push", bundle: nil)
+            let pushViewController = storyboard.instantiateViewController(identifier: "PushViewController") as! PushViewController
+            pushViewController.timeInt = self.timeInt
+
+            if pushViewController.status{
+                
+                // 設定に必要なクラスをインスタンス化
+                var notificationTime = DateComponents()
+                var trigger: UNNotificationTrigger
+                // 5分前に通知
+                notificationTime.hour = timeInt + 4
+                notificationTime.minute = 55
+                trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: true)
+                
+                // UNMutableNotificationContentクラスをインスタンス化
+                let content = UNMutableNotificationContent()
+
+                // 通知のメッセージセット
+                content.title = ""
+                content.body = "あと5分でエサやり時間です！"
+                content.sound = UNNotificationSound.default
+                let updatedRequest = UNNotificationRequest(identifier: "uuid",
+                                                          content: content, // 新しいcontent
+                                                          trigger: trigger) // 新しいtrigger
+                // 新しい通知の登録
+                UNUserNotificationCenter.current().add(updatedRequest)
+            }
             field.name = self.nameTextField.text ?? ""
             field.setText(ue: field.name + "を 飼いました!", sita: "よろしくね!")
         }
         else {
             field.name = self.nameTextField.text ?? ""
             field.setText(ue:"情報を編集しました", sita: "")
+            let storyboard = UIStoryboard(name: "Push", bundle: nil)
+            let pushViewController = storyboard.instantiateViewController(identifier: "PushViewController") as! PushViewController
+            pushViewController.timeInt = self.timeInt
+            if pushViewController.status{
+                
+                // 設定に必要なクラスをインスタンス化
+                var notificationTime = DateComponents()
+                var trigger: UNNotificationTrigger
+                // 5分前に通知
+                notificationTime.hour = timeInt + 4
+                notificationTime.minute = 55
+                trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: true)
+                
+                // UNMutableNotificationContentクラスをインスタンス化
+                let content = UNMutableNotificationContent()
+
+                // 通知のメッセージセット
+                content.title = ""
+                content.body = "あと5分でエサやり時間です！"
+                content.sound = UNNotificationSound.default
+                let updatedRequest = UNNotificationRequest(identifier: "uuid",
+                                                          content: content, // 新しいcontent
+                                                          trigger: trigger) // 新しいtrigger
+                // 新しい通知の登録
+                UNUserNotificationCenter.current().add(updatedRequest)
+            }
         }
         field.timeInt = timeInt
         field.saveData()

@@ -18,7 +18,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     private let cellId = "cellId"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return 10
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -28,7 +28,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = menuTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! NewDogCell
-        if indexPath.row == 7{
+        if indexPath.row == 8{
             cell.cellLabel.text = "犬を逃す"
             cell.cellLabel.textColor = .red
         }
@@ -50,10 +50,70 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         if indexPath.row == 5{
             cell.cellLabel.text = "エサやり結果をツイート"
         }
+        if indexPath.row == 7{
+            cell.cellLabel.text = "プッシュ通知を設定"
+        }
+        if indexPath.row == 9{
+            cell.cellLabel.text = ""
+            //admob
+            let gadBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+            gadBannerView.center = self.view.center
+            gadBannerView.adUnitID = "ca-app-pub-1923099754481403/6673096314"
+            gadBannerView.rootViewController = self;
+            let request = GADRequest();
+            
+            gadBannerView.load(request)
+            
+            gadBannerView.frame = CGRect(x: 0, y: cell.frame.height - gadBannerView.frame.height, width: cell.frame.width, height: gadBannerView.frame.height)
+            
+            cell.addSubview(gadBannerView)
+        }
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // 通知セル
+        if indexPath.row == 7{
+            let storyboard = UIStoryboard(name: "Push", bundle: nil)
+            let pushViewController = storyboard.instantiateViewController(identifier: "PushViewController") as! PushViewController
+            let field = self.presentingViewController as! UINavigationController
+            let fieldViewController = (field.viewControllers[0] as! FieldViewController)
+            
+            if fieldViewController.foodWait{
+                let alert: UIAlertController = UIAlertController(title: "エサやりの途中ですよ！", message: "", preferredStyle:  UIAlertController.Style.alert)
+                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                    // ボタンが押された時の処理を書く（クロージャ実装）
+                    (action: UIAlertAction!) -> Void in
+                })
+                alert.addAction(defaultAction)
+                
+                present(alert, animated: true, completion: nil)
+            }
+            else if fieldViewController.dying{
+                let alert: UIAlertController = UIAlertController(title: "死んでしまいました…", message: "", preferredStyle:  UIAlertController.Style.alert)
+                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                    // ボタンが押された時の処理を書く（クロージャ実装）
+                    (action: UIAlertAction!) -> Void in
+                })
+                alert.addAction(defaultAction)
+                
+                present(alert, animated: true, completion: nil)
+            }
+            else{
+                UIView.animate(
+                    withDuration: 0.2,
+                    delay: 0,
+                    options: .curveEaseIn,
+                    animations: {self.menuView.layer.position.x = -self.menuView.frame.width},
+                    completion: {bool in
+                        self.dismiss(animated: true, completion: nil)
+                        pushViewController.timeInt = fieldViewController.timeInt
+                        field.present(pushViewController, animated: true, completion: nil)
+                        
+                })
+            }
+        }
         
         //飼うcell
         if indexPath.row == 0{
@@ -223,7 +283,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         //逃がしcell
-        if indexPath.row == 7{
+        if indexPath.row == 8{
             
             let field = self.presentingViewController as! UINavigationController
             let fieldViewController = (field.viewControllers[0] as! FieldViewController)
@@ -671,18 +731,6 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         menuTableView.delegate = self
         menuTableView.dataSource = self
         
-        //admob
-        let gadBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        gadBannerView.center = self.view.center
-        gadBannerView.adUnitID = "ca-app-pub-1923099754481403/6673096314"
-        gadBannerView.rootViewController = self;
-        let request = GADRequest();
-        
-        gadBannerView.load(request)
-        
-        gadBannerView.frame = CGRect(x: 0, y: view.frame.height - gadBannerView.frame.height, width: menuTableView.frame.width, height: gadBannerView.frame.height)
-        gadBannerView.center.y -= 20
-        self.menuTableView.addSubview(gadBannerView)
     }
     
     override func viewWillAppear(_ animated: Bool) {

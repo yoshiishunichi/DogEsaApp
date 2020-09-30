@@ -7,11 +7,14 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class User{
     
     let kaisuu: Int
     let createAt: Timestamp
+    
     let email: String
     let username: String
     let dogName: String

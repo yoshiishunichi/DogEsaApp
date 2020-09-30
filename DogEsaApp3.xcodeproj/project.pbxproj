@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37BA352918DE16E1DCBE35EC /* Pods_DogEsaApp3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BCF2DA3C1A1C0867973A92A /* Pods_DogEsaApp3.framework */; };
+		CA0A9E5425242F96000D032D /* Push.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0A9E5325242F96000D032D /* Push.storyboard */; };
+		CA0A9E5725243005000D032D /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0A9E5625243005000D032D /* PushViewController.swift */; };
 		CAA07FAA2519044800976A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA07FA92519044800976A80 /* AppDelegate.swift */; };
 		CAA07FAC2519044800976A80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA07FAB2519044800976A80 /* SceneDelegate.swift */; };
 		CAA07FAE2519044800976A80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA07FAD2519044800976A80 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		5BCF2DA3C1A1C0867973A92A /* Pods_DogEsaApp3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogEsaApp3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0A9E5325242F96000D032D /* Push.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Push.storyboard; sourceTree = "<group>"; };
+		CA0A9E5625243005000D032D /* PushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		CAA07FA62519044800976A80 /* DogEsaApp3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DogEsaApp3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA07FA92519044800976A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAA07FAB2519044800976A80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				CAB9873925191C8300B43162 /* Profile.storyboard */,
 				CAB9873F25191CCE00B43162 /* Enter.storyboard */,
 				CAB9874425191D2000B43162 /* Ranking.storyboard */,
+				CA0A9E5325242F96000D032D /* Push.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				CAB9873C25191CA100B43162 /* ProfileViewController.swift */,
 				CAB9874225191CF100B43162 /* EnterViewController.swift */,
 				CAB9874725191D4400B43162 /* RankingViewController.swift */,
+				CA0A9E5625243005000D032D /* PushViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 				CAB98729251918A700B43162 /* Field.storyboard in Resources */,
 				CAB9873125191BDA00B43162 /* SignUp.storyboard in Resources */,
 				CAB9874025191CCE00B43162 /* Enter.storyboard in Resources */,
+				CA0A9E5425242F96000D032D /* Push.storyboard in Resources */,
 				CAB987502519294200B43162 /* レトロジャンプ.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +301,7 @@
 				CAA07FAA2519044800976A80 /* AppDelegate.swift in Sources */,
 				CAB9873D25191CA100B43162 /* ProfileViewController.swift in Sources */,
 				CAA07FAC2519044800976A80 /* SceneDelegate.swift in Sources */,
+				CA0A9E5725243005000D032D /* PushViewController.swift in Sources */,
 				CAB9874325191CF100B43162 /* EnterViewController.swift in Sources */,
 				CAF65627251EC0F0009B1A8A /* User.swift in Sources */,
 			);
@@ -354,6 +362,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -415,6 +424,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -444,12 +454,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = X5XD25873L;
 				INFOPLIST_FILE = DogEsaApp3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.syun-syun01.DogEsaApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -464,12 +476,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = X5XD25873L;
 				INFOPLIST_FILE = DogEsaApp3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.syun-syun01.DogEsaApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
